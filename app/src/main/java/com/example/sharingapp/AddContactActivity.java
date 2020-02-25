@@ -34,12 +34,12 @@ public class AddContactActivity extends AppCompatActivity {
     String username_str = username.getText().toString();
     String email_str = email.getText().toString();
 
-    if (username_str.equals("")) {
+    if (!username_str.isEmpty()) {
       username.setError("Empty field!");
       return;
     }
 
-    if (email_str.equals("")) {
+    if (email_str.isEmpty()) {
       email.setError("Empty field!");
       return;
     }

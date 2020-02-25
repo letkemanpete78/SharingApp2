@@ -66,7 +66,7 @@ public class EditContactActivity extends AppCompatActivity {
 
     Contact updated_contact = new Contact(username_str, email_str, id);
 
-    contact_list.deleteContact(contact);
+    contact_list.deleteContact(contact,context);
     contact_list.addContact(updated_contact);
     contact_list.saveContacts(context);
 
@@ -76,7 +76,7 @@ public class EditContactActivity extends AppCompatActivity {
 
   public void deleteContact(View view) {
 
-    contact_list.deleteContact(contact);
+    contact_list.deleteContact(contact,context);
     contact_list.saveContacts(context);
 
     // End EditContactActivity
